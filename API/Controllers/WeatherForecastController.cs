@@ -48,7 +48,7 @@ public class WeatherForecastController : ControllerBase
 
         var forecast = new WeatherForecast()
         {
-            DateOnly = new DateOnly(),
+            Date = new DateOnly(),
             TemperatureC = 75,
             Summary = "Warm"
         };
