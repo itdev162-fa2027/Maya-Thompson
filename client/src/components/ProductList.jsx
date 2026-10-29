@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getProducts } from "../services/api";
 import ProductCard from "./ProductCard";
 import "./ProductList.css";
+import ProductDetail from "./ProductDetail";
 
 function ProductList() {
     const [products, setProducts] = useState([]);
@@ -16,6 +17,8 @@ function ProductList() {
                 const data = await getProducts();
                 setProducts(data);
                 setError(null);
+                /*For some reason this error page never loads but 
+                the one in ProductDetail does*/
             } catch (err) {
                 setError("Failed to load products. Please try again later.")
             } finally {
