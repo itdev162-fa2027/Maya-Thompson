@@ -72,7 +72,7 @@ public class ProductsController : ControllerBase
         existingProduct.IsOnSale = product.IsOnSale;
         existingProduct.SalePrice = product.SalePrice;
         existingProduct.CurrentStock = product.CurrentStock;
-        existingProduct.ImageURL = product.ImageURL;
+        existingProduct.imageURL = product.imageURL;
 
         //Update audit date (preserve CreatedDate)
         existingProduct.LastUpdatedDate = DateTime.Now;

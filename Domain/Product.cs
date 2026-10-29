@@ -27,7 +27,7 @@ public class Product
     public int CurrentStock {get; set;}
 
     [Url(ErrorMessage = "Please enter a valid URL")]
-    public string ImageURL {get; set;} = string.Empty;
+    public string imageURL {get; set;} = string.Empty;
     public DateTime CreatedDate {get; set;}
     public DateTime LastUpdatedDate {get; set;}
 }
