@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Validation;
 
-public class ValidSalePriceAttribute : ValidationAttribute
+public class ValidSalesPriceAttribute : ValidationAttribute
 {
     protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {

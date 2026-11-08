@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using Domain.Validation;
 namespace Domain;
 
-[ValidSalePrice]
+[ValidSalesPrice]
 public class Product
 {
     public int Id {get; set;}

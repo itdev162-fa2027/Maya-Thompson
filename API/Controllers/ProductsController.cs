@@ -49,7 +49,7 @@ public class ProductsController : ControllerBase
 
         if (success)
         {
-            return CreatedAtAction(nameof(GetProducts), new
+            return CreatedAtAction(nameof(GetProduct), new
             { id = product.Id}, product);
         }
         return BadRequest ("Failed to create product");
