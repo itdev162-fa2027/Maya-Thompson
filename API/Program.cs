@@ -15,7 +15,13 @@ builder.Services.AddCors(options =>
 });
 
 // Add services to the container.
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+.AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = 
+    System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+});
+
 builder.Services.AddDbContext<DataContext>();
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
