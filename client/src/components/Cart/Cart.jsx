@@ -16,7 +16,7 @@ function Cart ({items, total, onUpdateQuantity, onRemove, onClear, onClose})
                         <button className="continue-shopping-button" onClick={onClose}>Continue Shopping</button>
                     </div> ) : (
                         <>
-                            <div> {items.map((item) => (<CartItem
+                            <div className="cart-items"> {items.map((item) => (<CartItem
                                 key={item.product.id}
                                 item={item}
                                 onUpdateQuantity={onUpdateQuantity}

@@ -1,4 +1,4 @@
-import "./cartItem.css";
+import "./CartItem.css";
 
 function CartItem({item, onUpdateQuantity, onRemove}) {
     const {product, quantity} = item;

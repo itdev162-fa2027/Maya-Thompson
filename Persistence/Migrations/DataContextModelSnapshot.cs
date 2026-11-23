@@ -31,10 +31,7 @@ namespace Persistence.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("ImageURL")
-                        .IsRequired()
+                        .HasMaxLength(1000)
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("IsOnSale")
@@ -45,12 +42,17 @@ namespace Persistence.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
+                        .HasMaxLength(100)
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("TEXT");
 
                     b.Property<decimal?>("SalePrice")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("imageURL")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
